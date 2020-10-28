@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4ce11ea-dcd4-4e76-a6f6-3c86c65d93e4" name="Default Changelist" comment="modify">
-      <change afterPath="$PROJECT_DIR$/.idea/001Bastics.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+    <list default="true" id="c4ce11ea-dcd4-4e76-a6f6-3c86c65d93e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +32,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603875882499</updated>
-      <workItem from="1603875883552" duration="437000" />
+      <workItem from="1603875883552" duration="823000" />
     </task>
+    <task id="LOCAL-00001" summary="modify">
+      <created>1603876331968</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603876331968</updated>
+    </task>
+    <task id="LOCAL-00002" summary="modify">
+      <created>1603876601489</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603876601489</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -50,13 +59,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="modify" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="349" y="0" key="CommitChangelistDialog2" timestamp="1603876307208">
+    <state x="349" y="0" key="CommitChangelistDialog2" timestamp="1603876600506">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="349" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603876307208" />
+    <state x="349" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603876600506" />
     <state x="529" y="138" key="FileChooserDialogImpl" timestamp="1603875963565">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="529" y="138" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603875963565" />
+    <state x="341" y="98" key="Vcs.Push.Dialog.v2" timestamp="1603876702578">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="341" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603876702578" />
   </component>
 </project>
