@@ -12,21 +12,37 @@
         html{
             height: 100%;
         }
-        @keyframes myfirst {
-            from {opacity: 0;}
-            to {opacity: 100;}
         }
-        h1,p{
-            animation: myfirst 2s infinite;
+        @keyframes myfirst {
+            0%{opacity: 0}
+            25%{opacity: 100}
+            50%{opacity: 0}
+            100%{opacity: 0}
+        }
+        @keyframes mysecond {
+            0%{opacity: 0}
+            25%{opacity: 0}
+            75%{opacity: 100}
+            100%{opacity: 0}
+        }
+        p{
+            font-size: 100px;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+        #canghai{
+            animation: myfirst 4.84s infinite;
+        }
+        #taotao{
+            animation: mysecond 4.84s infinite;
         }
     </style>
 </head>
 <body>
-<h1>静夜思</h1>
-<p>窗前明月光，</p>
-<p>疑是地上霜。</p>
-<p>举头望明月，</p>
-<p>低头思故乡。</p>
+<audio src="wav/bgm.wav" controls="controls" autoplay="autoplay" loop="loop">
+</audio>
+<p id="canghai">沧海两声笑</p>
+<p id="taotao">滔滔两岸潮</p>
 </body>
 </html>
-
