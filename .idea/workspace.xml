@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4ce11ea-dcd4-4e76-a6f6-3c86c65d93e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wav/bgm.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-    </list>
+    <list default="true" id="c4ce11ea-dcd4-4e76-a6f6-3c86c65d93e4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +43,7 @@
       <workItem from="1604052409293" duration="3495000" />
       <workItem from="1604129498031" duration="1199000" />
       <workItem from="1604196373451" duration="657000" />
-      <workItem from="1604312712437" duration="1297000" />
+      <workItem from="1604312712437" duration="1503000" />
     </task>
     <task id="LOCAL-00001" summary="modify">
       <created>1603876331968</created>
@@ -70,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603876885646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="modify">
+      <created>1604316069345</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604316069345</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,10 +88,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="489" y="231" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1603876837568" />
-    <state x="349" y="0" key="CommitChangelistDialog2" timestamp="1603876884664">
+    <state x="349" y="0" key="CommitChangelistDialog2" timestamp="1604316068308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="349" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603876884664" />
+    <state x="349" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1604316068308" />
     <state x="195" y="55" key="DiffContextDialog" timestamp="1603876874431">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -97,9 +100,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="529" y="138" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603875963565" />
-    <state x="341" y="98" key="Vcs.Push.Dialog.v2" timestamp="1603876894611">
+    <state x="341" y="98" key="Vcs.Push.Dialog.v2" timestamp="1604316080987">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="341" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603876894611" />
+    <state x="341" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1604316080987" />
   </component>
 </project>
