@@ -1,9 +1,9 @@
-html,body,div{
-    height: 100px;
+html,body,page{
+    height: 100%;
     width: 100%;
     margin: 0;
 }
-div{
+page{
     height: 100%;
     font-size: 180px;
     position: absolute;
@@ -19,12 +19,25 @@ div{
     animation: x 10s infinite;
 }
 #q{
+    background-image: url("../images/3.jpg");
     animation: q 10s infinite;
 }
 #d{
     background-color: black;
     color: white;
     animation: d 10s infinite;
+}
+#z{
+    font-size: 36px;
+    display: block;
+    animation: z 10s infinite;
+}
+@keyframes z {
+    0%{opacity: 0}
+    70%{opacity: 0}
+    80%{opacity: 100}
+    90%{opacity: 0}
+    100%{opacity: 0}
 }
 @keyframes c {
     0%{opacity: 0}
