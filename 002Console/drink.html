@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body{
+            font-size: 50px;
+        }
+    </style>
     <script>
-        document.write("我是向页面输出的文字!")
         function isInteger(c){
-            return c%1 === 0;2222
+            return c%1 === 0;
         }
         var price = 56//单价
         var count;//数量
         count = prompt(price+"元一杯，您要多少杯");
 
         if (isNaN(count)){
-            document.write("这根本不是数字")
+            document.write("这根本不是数字！！！")
         }
         else {
             if (isInteger(count)) {

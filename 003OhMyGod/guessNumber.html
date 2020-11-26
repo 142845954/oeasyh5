@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size: 200px;
+        }
+    </style>
+    <script>
+
+        function guess(){
+            var guess = prompt("您猜色子是多少？")
+            if (guess==a){
+                document.write("中了！！！")
+            }
+            else if (guess>a){
+                document.write("您猜大了")
+            }
+
+            else{
+                document.write("您猜小了")
+            }
+        }
+        var a = Math.random();
+        a = Math.floor(a * 6)+1;
+        //document.write(a);
+        document.write("<img src=\"images/"+a+".png\"/>");
+        guess();
+        guess();
+    </script>
+</head>
+<body>
+</body>
+</html>
