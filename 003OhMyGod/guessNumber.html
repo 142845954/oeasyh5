@@ -9,11 +9,16 @@
         }
     </style>
     <script>
-
+        var a = Math.random();
+        var binggo = false;
         function guess(){
+            if (binggo){
+                return;
+            }
             var guess = prompt("您猜色子是多少？")
             if (guess==a){
                 document.write("中了！！！")
+                binggo = true;
             }
             else if (guess>a){
                 document.write("您猜大了")
@@ -25,8 +30,9 @@
         }
         var a = Math.random();
         a = Math.floor(a * 6)+1;
+        console.info(a);
         //document.write(a);
-        document.write("<img src=\"images/"+a+".png\"/>");
+        //document.write("<img src=\"images/"+a+".png\"/>");
         guess();
         guess();
     </script>
