@@ -5,38 +5,58 @@
     <title>Title</title>
     <style>
         body{
-            font-size: 200px;
+            font-size: 100px;
         }
     </style>
-    <script>
-        var a = Math.random();
-        var binggo = false;
-        function guess(){
-            if (binggo){
-                return;
-            }
-            var guess = prompt("您猜色子是多少？")
-            if (guess==a){
-                document.write("中了！！！")
-                binggo = true;
-            }
-            else if (guess>a){
-                document.write("您猜大了")
-            }
 
-            else{
-                document.write("您猜小了")
-            }
-        }
-        var a = Math.random();
-        a = Math.floor(a * 6)+1;
-        console.info(a);
-        //document.write(a);
-        //document.write("<img src=\"images/"+a+".png\"/>");
-        guess();
-        guess();
-    </script>
 </head>
 <body>
+<div id="message"></div>
 </body>
 </html>
+<script>
+    var random = Math.random();
+    var binggo = false;
+    function guess(){
+        if (binggo){
+            return;
+        }
+        var guess = prompt("您猜色子是多少？");
+        if (!Number.isInteger(guess/1)||guess>6||guess<1){
+            document.getElementById("message").innerHTML = "您的输入有误";
+            return;
+        }
+        console.info("random===="+random);
+        console.info("guess===="+guess);
+        var diff = Math.abs(random-guess);
+        console.info("diff====="+diff);
+        var str;
+
+        if (guess==random){
+            str ="中了！！！"+"<img src=\"images/"+random+".png\"/>";
+            binggo = true;
+        }
+        else if (guess>random){
+            if (diff>1){
+                str ="您猜的太大了!";
+            }else{
+                str ="您猜的有点大!";
+            }
+        }
+        else {
+            if (diff>1){
+                str ="您猜的太小了!";
+            }
+            else{
+                str ="您猜的有点小!";
+            }
+        }
+        document.getElementById("message").innerHTML = str;
+    }
+    random = Math.floor(random * 6)+1;
+    console.info(random);
+    //document.write(a);
+    //document.write("<img src=\"images/"+a+".png\"/>");
+    guess();
+    guess();
+</script>
