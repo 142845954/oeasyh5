@@ -7,15 +7,26 @@
         #upper{
             width: 350px;
             height: 350px;
-            background-image: url('images/dressup/upper1.png');
+            background-image: url('images/dressup/upper3.png');
+        }
+        div{
+            border: 1px solid black;
         }
     </style>
 </head>
 <body>
 <div id="menu">
-    <div id="upper1">黑装</div>
-    <div id="upper2">蓝条纹</div>
+    <div id="suit" onclick="suit()">西装</div>
+    <div id="haihun" onclick="haihun()">海魂衫</div>
 </div>
 <div id="upper"></div>
 </body>
+<script>
+    function suit(){
+        document.getElementById("upper").style.backgroundImage = "url('images/dressup/upper1.png')";
+    }
+    function haihun(){
+        document.getElementById("upper").style.backgroundImage = "url('images/dressup/upper2.png')";
+    }
+</script>
 </html>
