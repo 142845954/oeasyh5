@@ -24,23 +24,58 @@
         #computerChoice>IMG{
             transform: scaleX(-1);
         }
+        h1{
+            margin-top: 0;
+            text-align: center;
+        }
     </style>
 </head>
-<body>
+<body onload="go()">
 <div id="container">
     <div id="mine">
+        <h1>我的出招</h1>
         <div id="myChoice">
             <img src="images/animation.gif">
         </div>
-        <input type="button" value="石头" />
-        <input type="button" value="剪刀" />
-        <input type="button" value="布" />
+        <input type="button" value="石头" onclick="rock()"/>
+        <input type="button" value="剪刀" onclick="scissors()"/>
+        <input type="button" value="布" onclick="paper()"/>
     </div>
     <div id="computer">
+        <h1>电脑出招</h1>
         <div id="computerChoice">
             <img src="images/animation.gif">
         </div>
     </div>
 </div>
 </body>
+<script>
+    var r;
+    function rock(){
+        document.getElementById("myChoice").innerHTML = "<img src=\"images/rock.jpg\"/>";
+        computerChoice();
+    }
+    function scissors(){
+        document.getElementById("myChoice").innerHTML = "<img src=\"images/scissors.jpg\"/>";
+        computerChoice();
+    }
+    function paper(){
+        document.getElementById("myChoice").innerHTML = "<img src=\"images/paper.jpg\"/>";
+        computerChoice();
+    }
+    function go() {
+        var r = 3 * Math.random();
+    }
+    function computerChoice(){
+        if (r<1){
+            document.getElementById("computerChoice").innerHTML = "<img src='images/rock.jpg'>";
+        }
+        else if (r<2){
+            document.getElementById("computerChoice").innerHTML = "<img src='images/scissors.jpg'>";
+        }
+        else{
+            document.getElementById("computerChoice").innerHTML = "<img src='images/paper.jpg'>";
+        }
+    }
+</script>
 </html>
