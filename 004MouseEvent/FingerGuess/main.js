@@ -1,56 +1,73 @@
-var r;
+var r,score=0,grade=1,LastHumanChoice;
 function rock(){
-    r = 3*Math.random();
     document.getElementById("myChoice").innerHTML = "<img src=\"images/rock.jpg\"/>";
-    var computerResult = computerChoice();
-    judge("rock",computerResult);
+    judge("rock");
+    LastHumanChoice = "rock";
 }
 
 function scissors(){
-    r = 3*Math.random();
     document.getElementById("myChoice").innerHTML = "<img src=\"images/scissors.jpg\"/>";
-    var computerResult = computerChoice();
-    judge("scissors",computerResult);
+    judge("scissors");
+    LastHumanChoice = "scissors";
 }
 function paper(){
-    r = 3*Math.random();
     document.getElementById("myChoice").innerHTML = "<img src=\"images/paper.jpg\"/>";
-    var computerResult = computerChoice();
-    judge("paper",computerResult);
+    judge("paper");
+    LastHumanChoice = "paper";
 }
-function judge(myChoice,computerResult){
+function judge(myChoice){
+    r = 3*Math.random();
+    var computerResult;
+    if(grade==1){
+        computerResult = onlyRocker();
+    }
+    else if(grade==2){
+        computerResult = learnFromHuman();
+    }
+    else{
+        computerResult = computerChoice();
+    }
     if (myChoice=="rock"){
         if(computerResult=="rock"){
-            document.getElementById("result").innerHTML = "draw";
+            ;
         }
         else if(computerResult=="scissors"){
-            document.getElementById("result").innerHTML = "win";
+            score+=1;
         }
         else if(computerResult=="paper"){
-            document.getElementById("result").innerHTML = "lose";
+            score-=1;
         }
     }
     else if (myChoice=="scissors"){
         if(computerResult=="rock"){
-            document.getElementById("result").innerHTML = "lose";
+            score-=1;
         }
         else if(computerResult=="scissors"){
-            document.getElementById("result").innerHTML = "draw";
+            ;
         }
         else if(computerResult=="paper"){
-            document.getElementById("result").innerHTML = "win";
+            score+=1;
         }
     }
     else{
         if(computerResult=="rock"){
-            document.getElementById("result").innerHTML = "win";
+            score+=1;
         }
         else if(computerResult=="scissors"){
-            document.getElementById("result").innerHTML = "lose";
+            score-=1;
         }
         else if(computerResult=="paper"){
-            document.getElementById("result").innerHTML = "draw";
+            ;
         }
+    }
+    if (score>=5){
+        score=0;
+        grade+=1;
+
+    }
+    document.getElementById("result").innerHTML="第"+grade+"关,积分："+score;
+    if (score>=10){
+        document.getElementById("result").innerHTML="NB,总通关了"+score;
     }
 }
 function go() {
@@ -68,4 +85,14 @@ function computerChoice(){
         document.getElementById("computerChoice").innerHTML = "<img src='images/paper.jpg'>";
         return "paper";
     }
+}
+function onlyRocker(){
+    document.getElementById("computerName").innerHTML = "电脑大锤哥";
+    document.getElementById("computerChoice").innerHTML = "<img src='images/rock.jpg'>";
+    return "rock";
+}
+function learnFromHuman(){
+    document.getElementById("computerName").innerHTML = "模仿帝";
+    document.getElementById("computerChoice").innerHTML = "<img src='images/"+LastHumanChoice+".jpg'>";
+    return LastHumanChoice;
 }
