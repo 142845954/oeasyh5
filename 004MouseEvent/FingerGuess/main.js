@@ -1,4 +1,5 @@
-var r,score=0,grade=1,LastHumanChoice;
+var r,score=0,grade=3,LastHumanChoice;
+var isComputerWin=false,lastComputerChoice="rock";
 function rock(){
     document.getElementById("myChoice").innerHTML = "<img src=\"images/rock.jpg\"/>";
     judge("rock");
@@ -24,40 +25,52 @@ function judge(myChoice){
     else if(grade==2){
         computerResult = learnFromHuman();
     }
+    else if (grade=3){
+        computerResult = winnerAgain();
+        lastComputerChoice = computerResult;
+    }
     else{
         computerResult = computerChoice();
     }
     if (myChoice=="rock"){
         if(computerResult=="rock"){
-            ;
+            isComputerWin = false;
         }
         else if(computerResult=="scissors"){
+            isComputerWin = false;
             score+=1;
+
         }
         else if(computerResult=="paper"){
+            isComputerWin = true;
             score-=1;
+
         }
     }
     else if (myChoice=="scissors"){
         if(computerResult=="rock"){
             score-=1;
+            isComputerWin = true;
         }
         else if(computerResult=="scissors"){
-            ;
+            isComputerWin = false;
         }
         else if(computerResult=="paper"){
             score+=1;
+            isComputerWin = false;
         }
     }
     else{
         if(computerResult=="rock"){
             score+=1;
+            isComputerWin = false;
         }
         else if(computerResult=="scissors"){
             score-=1;
+            isComputerWin = true;
         }
         else if(computerResult=="paper"){
-            ;
+            isComputerWin = false;
         }
     }
     if (score>=5){
@@ -86,13 +99,26 @@ function computerChoice(){
         return "paper";
     }
 }
+
 function onlyRocker(){
     document.getElementById("computerName").innerHTML = "电脑大锤哥";
     document.getElementById("computerChoice").innerHTML = "<img src='images/rock.jpg'>";
     return "rock";
 }
+
 function learnFromHuman(){
     document.getElementById("computerName").innerHTML = "模仿帝";
     document.getElementById("computerChoice").innerHTML = "<img src='images/"+LastHumanChoice+".jpg'>";
     return LastHumanChoice;
+}
+
+function winnerAgain(){
+    document.getElementById("computerName").innerHTML = "赢了还出";
+    if (isComputerWin){
+        document.getElementById("computerChoice").innerHTML = "<img src='images/"+lastComputerChoice+".jpg'>";
+        return lastComputerChoice;
+    }
+    var temp = computerChoice()
+    document.getElementById("computerChoice").innerHTML = "<img src='images/"+ temp +".jpg'>";
+    return temp;
 }
