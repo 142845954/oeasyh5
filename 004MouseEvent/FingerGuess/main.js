@@ -1,5 +1,5 @@
-var r,score=0,grade=3,LastHumanChoice;
-var isComputerWin=false,lastComputerChoice="rock";
+var r,score=0,grade=4,LastHumanChoice;
+var lastWinner="noOne",lastComputerChoice="rock";
 function rock(){
     document.getElementById("myChoice").innerHTML = "<img src=\"images/rock.jpg\"/>";
     judge("rock");
@@ -25,8 +25,12 @@ function judge(myChoice){
     else if(grade==2){
         computerResult = learnFromHuman();
     }
-    else if (grade=3){
+    else if (grade==3){
         computerResult = winnerAgain();
+        lastComputerChoice = computerResult;
+    }
+    else if (grade==4){
+        computerResult = loseChange();
         lastComputerChoice = computerResult;
     }
     else{
@@ -34,15 +38,15 @@ function judge(myChoice){
     }
     if (myChoice=="rock"){
         if(computerResult=="rock"){
-            isComputerWin = false;
+            lastWinner = "noOne";
         }
         else if(computerResult=="scissors"){
-            isComputerWin = false;
+            lastWinner = "human";
             score+=1;
 
         }
         else if(computerResult=="paper"){
-            isComputerWin = true;
+            lastWinner = "com";
             score-=1;
 
         }
@@ -50,27 +54,27 @@ function judge(myChoice){
     else if (myChoice=="scissors"){
         if(computerResult=="rock"){
             score-=1;
-            isComputerWin = true;
+            lastWinner = "com";
         }
         else if(computerResult=="scissors"){
-            isComputerWin = false;
+            lastWinner = "noOne";
         }
         else if(computerResult=="paper"){
             score+=1;
-            isComputerWin = false;
+            lastWinner = "hunman";
         }
     }
     else{
         if(computerResult=="rock"){
             score+=1;
-            isComputerWin = false;
+            lastWinner = "com";
         }
         else if(computerResult=="scissors"){
             score-=1;
-            isComputerWin = true;
+            lastWinner = "human";
         }
         else if(computerResult=="paper"){
-            isComputerWin = false;
+            lastWinner = "noOne";
         }
     }
     if (score>=5){
@@ -114,11 +118,33 @@ function learnFromHuman(){
 
 function winnerAgain(){
     document.getElementById("computerName").innerHTML = "赢了还出";
-    if (isComputerWin){
+    if (lastWinner=="com"){
         document.getElementById("computerChoice").innerHTML = "<img src='images/"+lastComputerChoice+".jpg'>";
         return lastComputerChoice;
     }
     var temp = computerChoice()
     document.getElementById("computerChoice").innerHTML = "<img src='images/"+ temp +".jpg'>";
     return temp;
+}
+
+function loseChange(){
+    document.getElementById("computerName").innerHTML = "输了就换";
+    if (lastWinner=="human"){
+        var temp = getResultExclude(lastComputerChoice);
+        document.getElementById("computerChoice").innerHTML = "<img src='images/"+lastComputerChoice+".jpg'>";
+        return temp;
+    }
+    temp = computerChoice()
+    document.getElementById("computerChoice").innerHTML = "<img src='images/"+ temp +".jpg'>";
+    return temp;
+}
+
+function getResultExclude(exclusion){
+    var temp = computerChoice();
+    if (temp==exclusion){
+        return getResultExclude(exclusion)
+    }
+    else{
+        return temp;
+    }
 }
